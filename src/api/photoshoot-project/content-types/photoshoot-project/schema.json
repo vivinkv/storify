@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "photoshoot_projects",
+  "info": {
+    "singularName": "photoshoot-project",
+    "pluralName": "photoshoot-projects",
+    "displayName": "Photoshoot Project",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "text"
+    },
+    "priority": {
+      "type": "integer"
+    },
+    "photos": {
+      "type": "component",
+      "repeatable": true,
+      "component": "photos.photoshoot-photos"
+    }
+  }
+}
