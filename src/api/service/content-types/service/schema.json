@@ -45,10 +45,10 @@
       "repeatable": false,
       "component": "seo.seo"
     },
-    "faq": {
+    "FAQ": {
       "type": "component",
-      "repeatable": true,
-      "component": "faq.faq"
+      "repeatable": false,
+      "component": "faq.heading"
     }
   }
 }

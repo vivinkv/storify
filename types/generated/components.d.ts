@@ -24,6 +24,21 @@ export interface FaqFaq extends Struct.ComponentSchema {
   };
 }
 
+export interface FaqHeading extends Struct.ComponentSchema {
+  collectionName: 'components_faq_headings';
+  info: {
+    description: '';
+    displayName: 'Main';
+  };
+  attributes: {
+    heading: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.DefaultTo<'Frequently Asked Questions'>;
+    list: Schema.Attribute.Component<'faq.faq', true>;
+    sub_heading: Schema.Attribute.String;
+  };
+}
+
 export interface PhotosPhotoshootPhotos extends Struct.ComponentSchema {
   collectionName: 'components_photos_photoshoot_photos';
   info: {
@@ -57,6 +72,7 @@ declare module '@strapi/strapi' {
     export interface ComponentSchemas {
       'blog-section.blog-section': BlogSectionBlogSection;
       'faq.faq': FaqFaq;
+      'faq.heading': FaqHeading;
       'photos.photoshoot-photos': PhotosPhotoshootPhotos;
       'seo.seo': SeoSeo;
     }

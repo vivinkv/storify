@@ -1,4 +1,19 @@
+import Logo from './extensions/logo.png'
+import favicon from './extensions/favicon.ico'
 const config = {
+  auth:{
+    logo:Logo
+  },
+  head:{
+    favicon:favicon
+  },
+  menu:{
+    logo:Logo
+  },
+  tutorials:false,
+  notifications:{
+    releases:false
+  },
   locales: [
     // 'ar',
     // 'fr',
