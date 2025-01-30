@@ -1,5 +1,6 @@
 import Logo from './extensions/logo.png'
-import favicon from './extensions/favicon.ico'
+import favicon from './extensions/favicon.ico';
+
 const config = {
   auth:{
     logo:Logo
@@ -13,6 +14,9 @@ const config = {
   tutorials:false,
   notifications:{
     releases:false
+  },
+  translation:{
+
   },
   locales: [
     // 'ar',
