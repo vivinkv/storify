@@ -16,6 +16,10 @@ const config = {
     releases:false
   },
   translation:{
+    "en-US":{
+      "HeaderLayout.button.label-add-entry":"Create New Blog"
+
+    }
 
   },
   locales: [

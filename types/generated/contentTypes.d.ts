@@ -393,7 +393,13 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    bottom_content: Schema.Attribute.Blocks &
+    bottom_content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -438,7 +444,13 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    top_content: Schema.Attribute.Blocks &
+    top_content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -532,7 +544,13 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    content: Schema.Attribute.Blocks &
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      > &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;

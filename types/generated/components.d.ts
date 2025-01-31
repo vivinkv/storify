@@ -3,10 +3,17 @@ import type { Schema, Struct } from '@strapi/strapi';
 export interface BlogSectionBlogSection extends Struct.ComponentSchema {
   collectionName: 'components_blog_section_blog_sections';
   info: {
+    description: '';
     displayName: 'blog_section';
   };
   attributes: {
-    content: Schema.Attribute.Blocks;
+    content: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
     heading: Schema.Attribute.String;
   };
 }

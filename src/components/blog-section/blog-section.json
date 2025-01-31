@@ -1,7 +1,8 @@
 {
   "collectionName": "components_blog_section_blog_sections",
   "info": {
-    "displayName": "blog_section"
+    "displayName": "blog_section",
+    "description": ""
   },
   "options": {},
   "attributes": {
@@ -10,7 +11,11 @@
       "required": false
     },
     "content": {
-      "type": "blocks"
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
     }
   }
 }
