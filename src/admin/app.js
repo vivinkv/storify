@@ -1,55 +1,31 @@
-import Logo from './extensions/logo.png'
-import favicon from './extensions/favicon.ico';
+import Logo from "./extensions/logo.png";
+import favicon from "./extensions/favicon.ico";
 
 const config = {
-  auth:{
-    logo:Logo
+  auth: {
+    logo: Logo,
   },
-  head:{
-    favicon:favicon
+  head: {
+    favicon: favicon,
   },
-  menu:{
-    logo:Logo
+  menu: {
+    logo: Logo,
   },
-  tutorials:false,
-  notifications:{
-    releases:false
+  tutorials: false,
+  notifications: {
+    releases: false,
   },
-  translation:{
-    "en-US":{
-      "HeaderLayout.button.label-add-entry":"Create New Blog"
 
-    }
-
+  translations: {
+    en: {
+      "app.components.LeftMenu.navbrand.title": "Storify Dashboard",
+      "app.components.LeftMenu.navbrand.workplace": "Production",
+      "Auth.form.welcome.title": "Welcome to Storify",
+      "Auth.form.welcome.subtitle": "Login to your account",
+      "Settings.profile.form.section.experience.interfaceLanguageHelp":
+        "Preference changes will apply only to you",
+    },
   },
-  locales: [
-    // 'ar',
-    // 'fr',
-    // 'cs',
-    // 'de',
-    // 'dk',
-    // 'es',
-    // 'he',
-    // 'id',
-    // 'it',
-    // 'ja',
-    // 'ko',
-    // 'ms',
-    // 'nl',
-    // 'no',
-    // 'pl',
-    // 'pt-BR',
-    // 'pt',
-    // 'ru',
-    // 'sk',
-    // 'sv',
-    // 'th',
-    // 'tr',
-    // 'uk',
-    // 'vi',
-    // 'zh-Hans',
-    // 'zh',
-  ],
 };
 
 const bootstrap = (app) => {
