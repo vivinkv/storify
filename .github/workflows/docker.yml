@@ -22,22 +22,25 @@ jobs:
           username: ${{ secrets.DOCKER_USER_NAME }}
           password: ${{ secrets.DOCKER_USER_PASSWORD }}
 
-      - name: Build and Push Docker Image (Latest Tag)
+      - name: Build and Push Docker Image
         id: build
         run: |
-          # Build Docker image with 'latest' tag
-          IMAGE_TAG="vivinkv/storify:latest"
-          
-          # Build the Docker image
-          docker build -t $IMAGE_TAG .
-          
-          # Push image to Docker Hub
-          docker push $IMAGE_TAG
-          
-          # Set the image tag as an environment variable
-          echo "IMAGE_TAG=$IMAGE_TAG" >> $GITHUB_ENV
+          # Get commit SHA and use it as a dynamic tag
+          COMMIT_SHA=$(git rev-parse --short HEAD)
+          IMAGE_NAME="vivinkv/storify"
+
+          # Build Docker image with both latest and commit SHA tags
+          docker build -t $IMAGE_NAME:latest -t $IMAGE_NAME:$COMMIT_SHA .
+
+          # Push both tags to Docker Hub
+          docker push $IMAGE_NAME:latest
+          docker push $IMAGE_NAME:$COMMIT_SHA
+
+          # Set image tags as outputs for reference
+          echo "IMAGE_TAG_LATEST=$IMAGE_NAME:latest" >> $GITHUB_ENV
+          echo "IMAGE_TAG_COMMIT=$IMAGE_NAME:$COMMIT_SHA" >> $GITHUB_ENV
 
       - name: Trigger Render Deploy (via Deploy Hook)
         run: |
-          # Trigger redeployment using Render Deploy Hook
-          curl -X POST https://render.com/deploy/hooks/${{ secrets.RENDER_DEPLOY_HOOK_URL }}
+          # Use Render deploy hook to trigger redeployment
+          curl -X POST "https://api.render.com/deploy/srv-cufpp52j1k6c73ft2da0?key=X7psl2t_UI8"
