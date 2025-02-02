@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_settings_google_tag_manager_scripts",
+  "info": {
+    "displayName": "Google Tag Manager Scripts"
+  },
+  "options": {},
+  "attributes": {
+    "head_section": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "body_section": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    },
+    "other_common_script": {
+      "type": "customField",
+      "options": {
+        "preset": "defaultHtml"
+      },
+      "customField": "plugin::ckeditor5.CKEditor"
+    }
+  }
+}

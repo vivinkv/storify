@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_contact_social_medias",
+  "info": {
+    "displayName": "Social Media"
+  },
+  "options": {},
+  "attributes": {
+    "youtube_url": {
+      "type": "string"
+    },
+    "linkedin_url": {
+      "type": "string"
+    },
+    "instagram_url": {
+      "type": "string"
+    },
+    "twitter_url": {
+      "type": "string"
+    },
+    "facebook_url": {
+      "type": "string"
+    }
+  }
+}

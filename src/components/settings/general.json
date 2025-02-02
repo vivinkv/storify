@@ -1,0 +1,40 @@
+{
+  "collectionName": "components_settings_generals",
+  "info": {
+    "displayName": "General",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "contact": {
+      "displayName": "contact",
+      "type": "component",
+      "repeatable": false,
+      "component": "contact.contact"
+    },
+    "social_media": {
+      "displayName": "Social Media",
+      "type": "component",
+      "repeatable": false,
+      "component": "contact.social-media"
+    },
+    "google_tag_manager": {
+      "displayName": "Google Tag Manager Scripts",
+      "type": "component",
+      "repeatable": false,
+      "component": "settings.google-tag-manager-scripts"
+    },
+    "google_map_embed_code": {
+      "type": "string"
+    },
+    "google_map_url": {
+      "type": "string"
+    },
+    "notification": {
+      "displayName": "Notification",
+      "type": "component",
+      "repeatable": true,
+      "component": "contact.notification"
+    }
+  }
+}

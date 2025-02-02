@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_contact_contacts",
+  "info": {
+    "displayName": "contact"
+  },
+  "options": {},
+  "attributes": {
+    "address_1": {
+      "type": "text"
+    },
+    "address_2": {
+      "type": "text"
+    },
+    "contact_number": {
+      "type": "string"
+    },
+    "contact_email": {
+      "type": "email"
+    },
+    "whatsapp_number": {
+      "type": "string"
+    }
+  }
+}

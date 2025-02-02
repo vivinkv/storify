@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_contact_notifications",
+  "info": {
+    "displayName": "Notification"
+  },
+  "options": {},
+  "attributes": {
+    "email": {
+      "type": "email",
+      "required": true
+    }
+  }
+}
