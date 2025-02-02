@@ -14,11 +14,13 @@
   "attributes": {
     "source_url": {
       "type": "string",
-      "required": true
+      "required": true,
+      "label": "Source URL"
     },
     "destination_url": {
       "type": "string",
-      "required": true
+      "required": true,
+      "label": "Destination URL"
     }
   }
 }
