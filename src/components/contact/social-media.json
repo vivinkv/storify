@@ -5,19 +5,19 @@
   },
   "options": {},
   "attributes": {
-    "youtube_url": {
+    "Youtube_URL": {
       "type": "string"
     },
-    "linkedin_url": {
+    "Linkedin_URL": {
       "type": "string"
     },
-    "instagram_url": {
+    "Instagram_URL": {
       "type": "string"
     },
-    "twitter_url": {
+    "Twitter_URL": {
       "type": "string"
     },
-    "facebook_url": {
+    "Facebook_URL": {
       "type": "string"
     }
   }

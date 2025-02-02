@@ -12,15 +12,15 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "source_url": {
+    "Source_URL": {
       "type": "string",
       "required": true,
       "label": "Source URL"
     },
-    "destination_url": {
+    "Destination_URL": {
       "type": "string",
-      "required": true,
-      "label": "Destination URL"
+      "required": true
     }
   }
+  
 }

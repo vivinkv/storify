@@ -386,14 +386,14 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    banner: Schema.Attribute.Media<'images' | 'files'> &
+    Banner: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    bottom_content: Schema.Attribute.RichText &
+    Bottom_Content: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
         {
@@ -411,40 +411,40 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::blog.blog'>;
     publishedAt: Schema.Attribute.DateTime;
-    sections: Schema.Attribute.Component<'blog-section.blog-section', true> &
+    Sections: Schema.Attribute.Component<'blog-section.blog-section', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    seo: Schema.Attribute.Component<'seo.seo', false> &
+    SEO: Schema.Attribute.Component<'seo.seo', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    slug: Schema.Attribute.UID<'title'>;
-    summary: Schema.Attribute.Text &
+    Slug: Schema.Attribute.UID<'title'>;
+    Summary: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    thumbnail: Schema.Attribute.Media<'images' | 'files'> &
+    Thumbnail: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    title: Schema.Attribute.String &
+    Title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    top_content: Schema.Attribute.RichText &
+    Top_Content: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
         {
@@ -475,14 +475,14 @@ export interface ApiGeneralSettingGeneralSetting
     draftAndPublish: true;
   };
   attributes: {
-    contact: Schema.Attribute.Component<'contact.contact', false>;
+    Contact: Schema.Attribute.Component<'contact.contact', false>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    favicon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    google_map_embed_code: Schema.Attribute.String;
-    google_map_url: Schema.Attribute.String;
-    google_tag_manager: Schema.Attribute.Component<
+    Favicon: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Google_Map_Embed_Code: Schema.Attribute.String;
+    Google_Map_URL: Schema.Attribute.String;
+    Google_Tag_Manager: Schema.Attribute.Component<
       'settings.google-tag-manager-scripts',
       false
     >;
@@ -492,14 +492,14 @@ export interface ApiGeneralSettingGeneralSetting
       'api::general-setting.general-setting'
     > &
       Schema.Attribute.Private;
-    logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
-    logo_small: Schema.Attribute.Media<
+    Logo: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Logo_Small: Schema.Attribute.Media<
       'images' | 'files' | 'videos' | 'audios'
     >;
-    notifications: Schema.Attribute.Component<'contact.notification', true>;
+    Notifications: Schema.Attribute.Component<'contact.notification', true>;
     publishedAt: Schema.Attribute.DateTime;
-    site_name: Schema.Attribute.String;
-    social_media: Schema.Attribute.Component<'contact.social-media', false>;
+    Site_Name: Schema.Attribute.String;
+    Social_Media: Schema.Attribute.Component<'contact.social-media', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -526,13 +526,13 @@ export interface ApiMenuMenu extends Struct.SingleTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    footer: Schema.Attribute.Component<'settings.footer', false> &
+    Footer: Schema.Attribute.Component<'settings.footer', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    header: Schema.Attribute.Component<'settings.header', true> &
+    Header: Schema.Attribute.Component<'settings.header', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -568,7 +568,7 @@ export interface ApiPhotoshootProjectPhotoshootProject
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Text &
+    Description: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -579,20 +579,20 @@ export interface ApiPhotoshootProjectPhotoshootProject
       'oneToMany',
       'api::photoshoot-project.photoshoot-project'
     >;
-    photos: Schema.Attribute.Component<'photos.photoshoot-photos', true> &
+    Photos: Schema.Attribute.Component<'photos.photoshoot-photos', true> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    priority: Schema.Attribute.Integer &
+    Priority: Schema.Attribute.Integer &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
     publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.String &
+    Title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -620,7 +620,7 @@ export interface ApiRedirectRedirect extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    destination_url: Schema.Attribute.String & Schema.Attribute.Required;
+    Destination_URL: Schema.Attribute.String & Schema.Attribute.Required;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -628,7 +628,7 @@ export interface ApiRedirectRedirect extends Struct.CollectionTypeSchema {
     > &
       Schema.Attribute.Private;
     publishedAt: Schema.Attribute.DateTime;
-    source_url: Schema.Attribute.String & Schema.Attribute.Required;
+    Source_URL: Schema.Attribute.String & Schema.Attribute.Required;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -652,14 +652,14 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    banner: Schema.Attribute.Media<'images' | 'files'> &
+    Banner: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    content: Schema.Attribute.RichText &
+    Content: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
         {
@@ -686,32 +686,32 @@ export interface ApiServiceService extends Struct.CollectionTypeSchema {
       'api::service.service'
     >;
     publishedAt: Schema.Attribute.DateTime;
-    seo: Schema.Attribute.Component<'seo.seo', false> &
+    SEO: Schema.Attribute.Component<'seo.seo', false> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    slug: Schema.Attribute.UID<'title'> &
+    Slug: Schema.Attribute.UID<'title'> &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    summary: Schema.Attribute.Text &
+    Summary: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    thumbnail: Schema.Attribute.Media<'images' | 'files'> &
+    Thumbnail: Schema.Attribute.Media<'images' | 'files'> &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    title: Schema.Attribute.String &
+    Title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -744,13 +744,13 @@ export interface ApiVideoVideo extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    description: Schema.Attribute.Text &
+    Description: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
         };
       }>;
-    link: Schema.Attribute.String &
+    Link: Schema.Attribute.String &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
           localized: true;
@@ -759,7 +759,7 @@ export interface ApiVideoVideo extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::video.video'>;
     publishedAt: Schema.Attribute.DateTime;
-    title: Schema.Attribute.String &
+    Title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
@@ -769,7 +769,7 @@ export interface ApiVideoVideo extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    video_type: Schema.Attribute.Enumeration<
+    Video_Type: Schema.Attribute.Enumeration<
       [
         'Reel',
         'YouTube Shorts',

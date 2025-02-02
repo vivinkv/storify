@@ -5,19 +5,19 @@
   },
   "options": {},
   "attributes": {
-    "address_1": {
+    "Address_1": {
       "type": "text"
     },
-    "address_2": {
+    "Address_2": {
       "type": "text"
     },
-    "contact_number": {
+    "Contact_Number": {
       "type": "string"
     },
-    "contact_email": {
+    "Contact_Email": {
       "type": "email"
     },
-    "whatsapp_number": {
+    "WhatsApp_Number": {
       "type": "string"
     }
   }

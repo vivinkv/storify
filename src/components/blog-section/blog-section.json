@@ -6,11 +6,11 @@
   },
   "options": {},
   "attributes": {
-    "heading": {
+    "Heading": {
       "type": "string",
       "required": false
     },
-    "content": {
+    "Content": {
       "type": "customField",
       "options": {
         "preset": "defaultHtml"

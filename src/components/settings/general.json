@@ -6,31 +6,31 @@
   },
   "options": {},
   "attributes": {
-    "contact": {
-      "displayName": "contact",
+    "Contact": {
+      "displayName": "Contact",
       "type": "component",
       "repeatable": false,
       "component": "contact.contact"
     },
-    "social_media": {
+    "Social_Media": {
       "displayName": "Social Media",
       "type": "component",
       "repeatable": false,
       "component": "contact.social-media"
     },
-    "google_tag_manager": {
+    "Google_Tag_Manager": {
       "displayName": "Google Tag Manager Scripts",
       "type": "component",
       "repeatable": false,
       "component": "settings.google-tag-manager-scripts"
     },
-    "google_map_embed_code": {
+    "Google_Map_Embed_Code": {
       "type": "string"
     },
-    "google_map_url": {
+    "Google_Map_URL": {
       "type": "string"
     },
-    "notification": {
+    "Notification": {
       "displayName": "Notification",
       "type": "component",
       "repeatable": true,

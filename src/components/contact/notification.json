@@ -5,7 +5,7 @@
   },
   "options": {},
   "attributes": {
-    "email": {
+    "Email": {
       "type": "email",
       "required": true
     }

@@ -5,10 +5,10 @@
   },
   "options": {},
   "attributes": {
-    "title": {
+    "Title": {
       "type": "string"
     },
-    "attachment": {
+    "Attachment": {
       "allowedTypes": [
         "images",
         "files"
@@ -16,10 +16,10 @@
       "type": "media",
       "multiple": false
     },
-    "priority": {
+    "Priority": {
       "type": "integer"
     },
-    "dimension": {
+    "Dimension": {
       "type": "enumeration",
       "enum": [
         "Portrait",

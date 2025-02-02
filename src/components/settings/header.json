@@ -5,11 +5,11 @@
   },
   "options": {},
   "attributes": {
-    "label": {
+    "Label": {
       "type": "string",
       "required": true
     },
-    "url": {
+    "URL": {
       "type": "string"
     }
   }

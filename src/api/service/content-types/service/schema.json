@@ -16,7 +16,7 @@
     }
   },
   "attributes": {
-    "title": {
+    "Title": {
       "type": "string",
       "required": true,
       "pluginOptions": {
@@ -25,7 +25,16 @@
         }
       }
     },
-    "summary": {
+    "Slug": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "uid",
+      "targetField": "title"
+    },
+    "Summary": {
       "type": "text",
       "pluginOptions": {
         "i18n": {
@@ -33,7 +42,7 @@
         }
       }
     },
-    "thumbnail": {
+    "Thumbnail": {
       "type": "media",
       "multiple": false,
       "required": true,
@@ -47,7 +56,7 @@
         }
       }
     },
-    "banner": {
+    "Banner": {
       "type": "media",
       "multiple": false,
       "required": true,
@@ -61,7 +70,7 @@
         }
       }
     },
-    "seo": {
+    "SEO": {
       "type": "component",
       "repeatable": false,
       "component": "seo.seo",
@@ -81,7 +90,7 @@
         }
       }
     },
-    "content": {
+    "Content": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -92,15 +101,7 @@
         "preset": "defaultHtml"
       },
       "customField": "plugin::ckeditor5.CKEditor"
-    },
-    "slug": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "uid",
-      "targetField": "title"
     }
+    
   }
 }

@@ -16,7 +16,7 @@
     }
   },
   "attributes": {
-    "title": {
+    "Title": {
       "type": "string",
       "required": true,
       "pluginOptions": {
@@ -25,7 +25,7 @@
         }
       }
     },
-    "summary": {
+    "Summary": {
       "type": "text",
       "pluginOptions": {
         "i18n": {
@@ -33,7 +33,7 @@
         }
       }
     },
-    "thumbnail": {
+    "Thumbnail": {
       "type": "media",
       "multiple": false,
       "required": true,
@@ -47,7 +47,7 @@
         }
       }
     },
-    "banner": {
+    "Banner": {
       "type": "media",
       "multiple": false,
       "required": true,
@@ -61,7 +61,7 @@
         }
       }
     },
-    "seo": {
+    "SEO": {
       "type": "component",
       "repeatable": false,
       "component": "seo.seo",
@@ -71,7 +71,7 @@
         }
       }
     },
-    "sections": {
+    "Sections": {
       "type": "component",
       "repeatable": true,
       "component": "blog-section.blog-section",
@@ -81,11 +81,11 @@
         }
       }
     },
-    "slug": {
+    "Slug": {
       "type": "uid",
       "targetField": "title"
     },
-    "top_content": {
+    "Top_Content": {
       "pluginOptions": {
         "i18n": {
           "localized": true
@@ -97,7 +97,7 @@
       },
       "customField": "plugin::ckeditor5.CKEditor"
     },
-    "bottom_content": {
+    "Bottom_Content": {
       "pluginOptions": {
         "i18n": {
           "localized": true

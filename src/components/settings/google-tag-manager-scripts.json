@@ -5,21 +5,21 @@
   },
   "options": {},
   "attributes": {
-    "head_section": {
+    "Head_Section": {
       "type": "customField",
       "options": {
         "preset": "defaultHtml"
       },
       "customField": "plugin::ckeditor5.CKEditor"
     },
-    "body_section": {
+    "Body_Section": {
       "type": "customField",
       "options": {
         "preset": "defaultHtml"
       },
       "customField": "plugin::ckeditor5.CKEditor"
     },
-    "other_common_script": {
+    "Other_Common_Script": {
       "type": "customField",
       "options": {
         "preset": "defaultHtml"

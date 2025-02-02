@@ -6,15 +6,15 @@
   },
   "options": {},
   "attributes": {
-    "heading": {
+    "Heading": {
       "type": "string",
       "required": true,
       "default": "Frequently Asked Questions"
     },
-    "sub_heading": {
+    "Sub_Heading": {
       "type": "string"
     },
-    "list": {
+    "List": {
       "type": "component",
       "repeatable": true,
       "component": "faq.faq"

@@ -5,7 +5,7 @@
   },
   "options": {},
   "attributes": {
-    "image": {
+    "Image": {
       "allowedTypes": [
         "images",
         "files",
@@ -15,7 +15,7 @@
       "type": "media",
       "multiple": false
     },
-    "content": {
+    "Content": {
       "type": "text"
     }
   }

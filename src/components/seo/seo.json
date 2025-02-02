@@ -5,16 +5,16 @@
   },
   "options": {},
   "attributes": {
-    "meta_title": {
+    "Meta_Title": {
       "type": "string"
     },
-    "meta_description": {
+    "Meta_Description": {
       "type": "text"
     },
-    "meta_keywords": {
+    "Meta_Keywords": {
       "type": "text"
     },
-    "og_image": {
+    "OG_Image": {
       "allowedTypes": [
         "images",
         "files",

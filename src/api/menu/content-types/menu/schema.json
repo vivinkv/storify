@@ -16,7 +16,7 @@
     }
   },
   "attributes": {
-    "header": {
+    "Header": {
       "type": "component",
       "repeatable": true,
       "pluginOptions": {
@@ -26,7 +26,7 @@
       },
       "component": "settings.header"
     },
-    "footer": {
+    "Footer": {
       "type": "component",
       "repeatable": false,
       "pluginOptions": {

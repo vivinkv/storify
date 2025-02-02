@@ -6,15 +6,15 @@
   },
   "options": {},
   "attributes": {
-    "question": {
+    "Question": {
       "type": "string",
       "required": true
     },
-    "answer": {
+    "Answer": {
       "type": "text",
       "required": true
     },
-    "publish": {
+    "Publish": {
       "type": "boolean",
       "default": true
     }

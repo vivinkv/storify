@@ -7,14 +7,14 @@ export interface BlogSectionBlogSection extends Struct.ComponentSchema {
     displayName: 'blog_section';
   };
   attributes: {
-    content: Schema.Attribute.RichText &
+    Content: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
         {
           preset: 'defaultHtml';
         }
       >;
-    heading: Schema.Attribute.String;
+    Heading: Schema.Attribute.String;
   };
 }
 
@@ -24,11 +24,11 @@ export interface ContactContact extends Struct.ComponentSchema {
     displayName: 'contact';
   };
   attributes: {
-    address_1: Schema.Attribute.Text;
-    address_2: Schema.Attribute.Text;
-    contact_email: Schema.Attribute.Email;
-    contact_number: Schema.Attribute.String;
-    whatsapp_number: Schema.Attribute.String;
+    Address_1: Schema.Attribute.Text;
+    Address_2: Schema.Attribute.Text;
+    Contact_Email: Schema.Attribute.Email;
+    Contact_Number: Schema.Attribute.String;
+    WhatsApp_Number: Schema.Attribute.String;
   };
 }
 
@@ -38,7 +38,7 @@ export interface ContactNotification extends Struct.ComponentSchema {
     displayName: 'Notification';
   };
   attributes: {
-    email: Schema.Attribute.Email & Schema.Attribute.Required;
+    Email: Schema.Attribute.Email & Schema.Attribute.Required;
   };
 }
 
@@ -48,11 +48,11 @@ export interface ContactSocialMedia extends Struct.ComponentSchema {
     displayName: 'Social Media';
   };
   attributes: {
-    facebook_url: Schema.Attribute.String;
-    instagram_url: Schema.Attribute.String;
-    linkedin_url: Schema.Attribute.String;
-    twitter_url: Schema.Attribute.String;
-    youtube_url: Schema.Attribute.String;
+    Facebook_URL: Schema.Attribute.String;
+    Instagram_URL: Schema.Attribute.String;
+    Linkedin_URL: Schema.Attribute.String;
+    Twitter_URL: Schema.Attribute.String;
+    Youtube_URL: Schema.Attribute.String;
   };
 }
 
@@ -63,9 +63,9 @@ export interface FaqFaq extends Struct.ComponentSchema {
     displayName: 'faq';
   };
   attributes: {
-    answer: Schema.Attribute.Text & Schema.Attribute.Required;
-    publish: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
-    question: Schema.Attribute.String & Schema.Attribute.Required;
+    Answer: Schema.Attribute.Text & Schema.Attribute.Required;
+    Publish: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    Question: Schema.Attribute.String & Schema.Attribute.Required;
   };
 }
 
@@ -76,11 +76,11 @@ export interface FaqHeading extends Struct.ComponentSchema {
     displayName: 'Main';
   };
   attributes: {
-    heading: Schema.Attribute.String &
+    Heading: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.DefaultTo<'Frequently Asked Questions'>;
-    list: Schema.Attribute.Component<'faq.faq', true>;
-    sub_heading: Schema.Attribute.String;
+    List: Schema.Attribute.Component<'faq.faq', true>;
+    Sub_Heading: Schema.Attribute.String;
   };
 }
 
@@ -90,12 +90,12 @@ export interface PhotosPhotoshootPhotos extends Struct.ComponentSchema {
     displayName: 'Photoshoot Photos';
   };
   attributes: {
-    attachment: Schema.Attribute.Media<'images' | 'files'>;
-    dimension: Schema.Attribute.Enumeration<
+    Attachment: Schema.Attribute.Media<'images' | 'files'>;
+    Dimension: Schema.Attribute.Enumeration<
       ['Portrait', 'Landscape', 'Square']
     >;
-    priority: Schema.Attribute.Integer;
-    title: Schema.Attribute.String;
+    Priority: Schema.Attribute.Integer;
+    Title: Schema.Attribute.String;
   };
 }
 
@@ -105,10 +105,10 @@ export interface SeoSeo extends Struct.ComponentSchema {
     displayName: 'seo';
   };
   attributes: {
-    meta_description: Schema.Attribute.Text;
-    meta_keywords: Schema.Attribute.Text;
-    meta_title: Schema.Attribute.String;
-    og_image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Meta_Description: Schema.Attribute.Text;
+    Meta_Keywords: Schema.Attribute.Text;
+    Meta_Title: Schema.Attribute.String;
+    OG_Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -118,8 +118,8 @@ export interface SettingsFooter extends Struct.ComponentSchema {
     displayName: 'footer';
   };
   attributes: {
-    content: Schema.Attribute.Text;
-    image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
+    Content: Schema.Attribute.Text;
+    Image: Schema.Attribute.Media<'images' | 'files' | 'videos' | 'audios'>;
   };
 }
 
@@ -130,15 +130,15 @@ export interface SettingsGeneral extends Struct.ComponentSchema {
     displayName: 'General';
   };
   attributes: {
-    contact: Schema.Attribute.Component<'contact.contact', false>;
-    google_map_embed_code: Schema.Attribute.String;
-    google_map_url: Schema.Attribute.String;
-    google_tag_manager: Schema.Attribute.Component<
+    Contact: Schema.Attribute.Component<'contact.contact', false>;
+    Google_Map_Embed_Code: Schema.Attribute.String;
+    Google_Map_URL: Schema.Attribute.String;
+    Google_Tag_Manager: Schema.Attribute.Component<
       'settings.google-tag-manager-scripts',
       false
     >;
-    notification: Schema.Attribute.Component<'contact.notification', true>;
-    social_media: Schema.Attribute.Component<'contact.social-media', false>;
+    Notification: Schema.Attribute.Component<'contact.notification', true>;
+    Social_Media: Schema.Attribute.Component<'contact.social-media', false>;
   };
 }
 
@@ -149,21 +149,21 @@ export interface SettingsGoogleTagManagerScripts
     displayName: 'Google Tag Manager Scripts';
   };
   attributes: {
-    body_section: Schema.Attribute.RichText &
+    Body_Section: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
         {
           preset: 'defaultHtml';
         }
       >;
-    head_section: Schema.Attribute.RichText &
+    Head_Section: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
         {
           preset: 'defaultHtml';
         }
       >;
-    other_common_script: Schema.Attribute.RichText &
+    Other_Common_Script: Schema.Attribute.RichText &
       Schema.Attribute.CustomField<
         'plugin::ckeditor5.CKEditor',
         {
@@ -179,8 +179,8 @@ export interface SettingsHeader extends Struct.ComponentSchema {
     displayName: 'header';
   };
   attributes: {
-    label: Schema.Attribute.String & Schema.Attribute.Required;
-    url: Schema.Attribute.String;
+    Label: Schema.Attribute.String & Schema.Attribute.Required;
+    URL: Schema.Attribute.String;
   };
 }
 

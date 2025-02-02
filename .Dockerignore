@@ -1,3 +1,32 @@
-node_modules/
+# Node modules (will be reinstalled in the image)
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Environment files (since you're setting env vars in Render)
 .env
-.env.*
+.env.development
+.env.production
+
+# Git-related files
+.git
+.gitignore
+
+# Docker-related
+Dockerfile
+docker-compose.yml
+.dockerignore
+
+# Build output
+build
+dist
+.cache
+tmp
+
+# IDE settings
+.vscode
+.idea
+
+# OS-specific
+.DS_Store
+Thumbs.db

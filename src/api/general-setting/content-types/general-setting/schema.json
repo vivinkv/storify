@@ -12,10 +12,10 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "site_name": {
+    "Site_Name": {
       "type": "string"
     },
-    "logo": {
+    "Logo": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -26,7 +26,7 @@
         "audios"
       ]
     },
-    "logo_small": {
+    "Logo_Small": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -37,7 +37,7 @@
         "audios"
       ]
     },
-    "favicon": {
+    "Favicon": {
       "type": "media",
       "multiple": false,
       "required": false,
@@ -48,28 +48,28 @@
         "audios"
       ]
     },
-    "google_map_embed_code": {
+    "Google_Map_Embed_Code": {
       "type": "string"
     },
-    "google_map_url": {
+    "Google_Map_URL": {
       "type": "string"
     },
-    "contact": {
+    "Contact": {
       "type": "component",
       "repeatable": false,
       "component": "contact.contact"
     },
-    "social_media": {
+    "Social_Media": {
       "type": "component",
       "repeatable": false,
       "component": "contact.social-media"
     },
-    "google_tag_manager": {
+    "Google_Tag_Manager": {
       "type": "component",
       "repeatable": false,
       "component": "settings.google-tag-manager-scripts"
     },
-    "notifications": {
+    "Notifications": {
       "type": "component",
       "repeatable": true,
       "component": "contact.notification"
