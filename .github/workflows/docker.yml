@@ -38,9 +38,7 @@ jobs:
         # Set the image tag as an output for later steps
         echo "IMAGE_TAG=$IMAGE_TAG" >> $GITHUB_ENV
 
-    - name: Update Render Deployment (via API)
+    - name: Trigger Render Deploy (via Deploy Hook)
       run: |
-        # Use Render's API to trigger redeployment
-        curl -X POST https://api.render.com/v1/services/cufo5oggph6c7385veug/deployments \
-            -H "Authorization: Bearer ${{ secrets.RENDER_API_KEY }}" \
-            -d '{"dockerImage": "${{ env.IMAGE_TAG }}"}'
+        # Use the Render deploy hook to trigger redeployment
+        curl -X POST https://render.com/deploy/hooks/YOUR_DEPLOY_HOOK_URL
