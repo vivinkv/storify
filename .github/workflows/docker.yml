@@ -1,4 +1,4 @@
-name: Build and Deploy Docker Image to Render
+name: Build and Deploy Docker Images to Render
 
 on:
   push:
@@ -22,23 +22,36 @@ jobs:
           username: ${{ secrets.DOCKER_USER_NAME }}
           password: ${{ secrets.DOCKER_USER_PASSWORD }}
 
-      - name: Build and Push Docker Image
-        id: build
+      - name: Build and Push storify-strapi Image
+        id: build_strapi
         run: |
           # Get commit SHA and use it as a dynamic tag
           COMMIT_SHA=$(git rev-parse --short HEAD)
-          IMAGE_NAME="vivinkv/storify"
+          STRAPI_IMAGE_NAME="vivinkv/storify-strapi"
 
-          # Build Docker image with both latest and commit SHA tags
-          docker build -t $IMAGE_NAME:latest -t $IMAGE_NAME:$COMMIT_SHA .
+          # Build Docker image for storify-strapi
+          docker build -t $STRAPI_IMAGE_NAME:latest -t $STRAPI_IMAGE_NAME:$COMMIT_SHA .
 
-          # Push both tags to Docker Hub
-          docker push $IMAGE_NAME:latest
-          docker push $IMAGE_NAME:$COMMIT_SHA
+          # Push Strapi image tags to Docker Hub
+          docker push $STRAPI_IMAGE_NAME:latest
+          docker push $STRAPI_IMAGE_NAME:$COMMIT_SHA
 
-          # Set image tags as outputs for reference
-          echo "IMAGE_TAG_LATEST=$IMAGE_NAME:latest" >> $GITHUB_ENV
-          echo "IMAGE_TAG_COMMIT=$IMAGE_NAME:$COMMIT_SHA" >> $GITHUB_ENV
+      - name: Build and Push postgres Image
+        id: build_postgres
+        run: |
+          POSTGRES_IMAGE_NAME="vivinkv/postgres"
+
+          # Pull the postgres:16 base image and tag it
+          docker pull postgres:16
+          docker tag postgres:16 $POSTGRES_IMAGE_NAME:latest
+
+          # Push the Postgres image tag to Docker Hub
+          docker push $POSTGRES_IMAGE_NAME:latest
+
+      - name: Deploy using Docker Compose
+        run: |
+          # Ensure services are started with the correct images and volumes
+          docker-compose -f docker-compose.yml up -d
 
       - name: Trigger Render Deploy (via Deploy Hook)
         run: |

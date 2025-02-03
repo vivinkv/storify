@@ -1,8 +1,7 @@
-
 services:
   strapi:
     build: .
-    container_name: strapi-app
+    container_name: storify-backend
     env_file:
       - .env
     environment:
@@ -14,25 +13,24 @@ services:
       TRANSFER_TOKEN_SALT: ${TRANSFER_TOKEN_SALT}
       JWT_SECRET: ${JWT_SECRET}
       NODE_ENV: ${NODE_ENV}
-      DATABASE_CLIENT: ${DATABASE_CLIENT}
-      DATABASE_HOST: db  # Changed from localhost to service name 'db'
-      DATABASE_PORT: ${DATABASE_PORT}
+      DATABASE_CLIENT: postgres
+      DATABASE_HOST: db
+      DATABASE_PORT: 5432
       DATABASE_NAME: ${DATABASE_NAME}
       DATABASE_USERNAME: ${DATABASE_USERNAME}
       DATABASE_PASSWORD: ${DATABASE_PASSWORD}
-      DATABASE_SSL: ${DATABASE_SSL}
+      DATABASE_SSL: false
     ports:
       - "${PORT}:${PORT}"
     volumes:
-      - ./public/uploads:/app/public/uploads  # Persist uploads
+      - ./public/uploads:/app/public/uploads # Host-to-container mount for uploads
+      - strapi_uploads:/app/public/uploads   # Named volume for uploads persistence
     depends_on:
       - db
 
   db:
     image: postgres:16
-    container_name: strapi-db
-    env_file:
-      - .env
+    container_name: storify-db
     environment:
       POSTGRES_USER: ${DATABASE_USERNAME}
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
@@ -40,7 +38,9 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - strapi_db_data:/var/lib/postgresql/data
+      - strapi_db_data:/var/lib/postgresql/data # Persistent database data
+    restart: always
 
 volumes:
-  strapi_db_data:
+  strapi_db_data: # For database persistence
+  strapi_uploads: # For image uploads persistence
