@@ -32,7 +32,7 @@
         }
       },
       "type": "uid",
-      "targetField": "title"
+      "targetField": "Title"
     },
     "Summary": {
       "type": "text",

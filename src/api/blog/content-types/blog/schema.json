@@ -83,7 +83,7 @@
     },
     "Slug": {
       "type": "uid",
-      "targetField": "title"
+      "targetField": "Title"
     },
     "Top_Content": {
       "pluginOptions": {

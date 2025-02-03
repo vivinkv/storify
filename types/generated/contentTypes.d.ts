@@ -423,7 +423,7 @@ export interface ApiBlogBlog extends Struct.CollectionTypeSchema {
           localized: true;
         };
       }>;
-    Slug: Schema.Attribute.UID<'title'>;
+    Slug: Schema.Attribute.UID<'Title'>;
     Summary: Schema.Attribute.Text &
       Schema.Attribute.SetPluginOptions<{
         i18n: {
